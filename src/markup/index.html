@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khula:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style/style.css" />
+
+    <title>CONTROL_2</title>
+  </head>
+  <body class="board-app">
+    <div class="container">
+      <h1>Финансовый Трекер</h1>
+
+      <div class="balance">
+        <h2>Общий баланс: <span id="total-balance">0</span> руб.</h2>
+      </div>
+
+      <div class="form-container">
+        <form id="transaction-form">
+          <select id="type" required>
+            <option value="">Выберите тип операции</option>
+            <option value="income">Доход</option>
+            <option value="expense">Расход</option>
+          </select>
+
+          <select id="category" required>
+            <option value="">Выберите категорию</option>
+            <option value="salary">Зарплата</option>
+            <option value="food">Еда</option>
+            <option value="transport">Транспорт</option>
+            <option value="entertainment">Развлечения</option>
+          </select>
+
+          <input type="number" id="amount" placeholder="Сумма" />
+
+          <button type="submit">Добавить операцию</button>
+        </form>
+      </div>
+
+      <div class="transactions-container">
+        <h2>Список операций</h2>
+        <div id="transactions-list"></div>
+      </div>
+      <div class="filters">
+        <h2>Фильтры</h2>
+        <select id="type-filter">
+          <option value="">Все операции</option>
+          <option value="income">Доходы</option>
+          <option value="expense">Расходы</option>
+        </select>
+        <select id="category-filter">
+          <option value="">Все категории</option>
+          <option value="salary">Зарплата</option>
+          <option value="food">Еда</option>
+          <option value="transport">Транспорт</option>
+          <option value="entertainment">Развлечения</option>
+        </select>
+      </div>
+    </div>
+
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
